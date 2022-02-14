@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>BAO</title>
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        html,
+        body,
+        header,
+        .carousel {
+            max-height: 100vh;
+        }
+        
+        @media (max-width: 740px) {
+            html,
+            body,
+            view {
+                height: 100vh;
+            }
+        }
+        
+        @media (min-width: 800px) and (max-width: 8250px) {
+            html,
+            body,
+            .view {
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-xl navbar-light white scrolling-navbar">
+        <div class="container ">
+            <a href="#" class="navbar-brand waves-effect">
+                <strong class="blue-text">BAO</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle Navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mr-auto mt-2">
+                    <li class="nav__item-active">
+                        <a href="#" class="nav-link waves-effect">Главная</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav-link waves-effect">Скидки</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav-link waves-effect">О нас</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav-link waves-effect">Отзывы</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav-link waves-effect">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex align-items-center justify-content-end">
+                <button type="button" data-toggle="modal" data-target="#Signin" class="btn btn-link px-3 me-2">
+                Войти
+               </button>
+                <button type="button" data-toggle="modal" data-target="#Signup" class="btn btn-primary me-3">
+                Создать аккаунт
+               </button>
+                <a class="btn btn-light px-3" href="https://github.com/" role="button"><i class="fab fa-github"></i
+              ></a>
+            </div>
+        </div>
+        </div>
+        </div>
+    </nav>
+    <div class="modal fade " id="Signin" tabindex="-1" role="dialog" aria-labelledby="Signin" aria-hidden="true">
+        <div class="modal-dialog modal-m" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="Signin_label">Добро Пожаловать!</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form action="#">
+                            <div class="form-froup">
+                                <label for="Signin">Электронную Почта</label>
+                                <input type="email" class="form-control form-control-lg" id="Signin" aria-describedby="emailHelp" placeholder="@mail" required>
+                                <small id="emailHelp" class="form-text text-muted">Введите вашу электронную почту</small>
+                            </div>
+                            <div class="form-froup">
+                                <label for="Signin">Пароль</label>
+                                <input type="password" class="form-control form-control-sm" id="Signin" placeholder="Пароль" required>
+                                <small id="passHelp" class="form-text text-muted">Введите ваш Пароль</small>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                 <input type="checkbox" class="form-check-input">
+                                 Запомнить меня                                
+                                </label>
+
+                            </div>
+                            <button type="submit" class="btn btn-primary">Регистрация</button>
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    </div>
+    <div class="modal fade " id="Signup" tabindex="-1" role="dialog" aria-labelledby="Signup" aria-hidden="true">
+        <div class="modal-dialog modal-m" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="Signin_label">Добро Пожаловать!</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form action="#">
+                            <div class="form-froup">
+                                <label for="Signup">Электронную Почта</label>
+                                <input type="email" class="form-control form-control-lg" id="Signin" aria-describedby="emailHelp" placeholder="@mail">
+                                <small id="emailHelp" class="form-text text-muted">Введите вашу электронную почту</small>
+                            </div>
+                            <div class="form-froup">
+                                <label for="Signup">Пароль</label>
+                                <input type="password" class="form-control form-control-sm" id="Signin" placeholder="Пароль">
+                                <small id="passHelp" class="form-text text-muted">Введите ваш Пароль</small>
+                            </div>
+                            <div class="form-froup">
+                                <label for="Signup">Подтвердите ваш Пароль</label>
+                                <input type="password" class="form-control form-control-sm" id="Signin" placeholder="Пароль" required>
+                                <small id="passHelp" class="form-text text-muted">пароль должен содержать 10 символов</small>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                               <input type="checkbox" class="form-check-input">
+                               Запомнить меня                                
+                              </label>
+
+                            </div>
+                            <button type="submit" class="btn btn-primary">Войти</button>
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    </div>
+    <div id="carousel-ex" class="carousel slide carousel-fade pt-4" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li class="active" data-target="#carousel-ex" data-slide-to="0"></li>
+            <li data-target="#carousel-ex" data-slide-to="1"></li>
+            <li data-target="#carousel-ex" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+                <div class="view" style="
+              background-image: url(https://images.pexels.com/photos/5126839/pexels-photo-5126839.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+              background-repeat: no-repeat;
+              background-size: cover;
+            ">
+                    <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
+                        <div class="text-center white-text mx-5 wow slideInLeft">
+                            <h1 class="mb-4">
+                                <strong>Best Auto Corporation</strong>
+                            </h1>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, consectetur!
+                            </p>
+                            <p class="mb-4 d-none d-md-block">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum laborum illum, tempora numquam suscipit voluptas!
+                            </p>
+                            <a href="" class="btn btn-outline-cyan btn-lg">
+                  Lorem, ipsum dolor.
+                  <i class="fa fa-graduation-cap ml-2"></i>
+                </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="view" style="
+              background-image: url(https://images.pexels.com/photos/1383675/pexels-photo-1383675.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+              background-repeat: no-repeat;
+              background-size: cover;
+            ">
+                    <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
+                        <div class="text-center white-text mx-5 wow fadeIn">
+                            <h1 class="mb-4">
+                                <strong>Best Auto Corporation</strong>
+                            </h1>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, consectetur!
+                            </p>
+                            <p class="mb-4 d-none d-md-block">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum laborum illum, tempora numquam suscipit voluptas!
+                            </p>
+                            <a href="" class="btn btn-outline-cyan btn-lg">
+                  Lorem, ipsum dolor.
+                  <i class="fa fa-graduation-cap ml-2"></i>
+                </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="view" style="
+              background-image: url(https://images.pexels.com/photos/2280148/pexels-photo-2280148.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+              background-repeat: no-repeat;
+              background-size: cover;
+            ">
+                    <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
+                        <div class="text-center white-text mx-5 wow fadeIn">
+                            <h1 class="mb-4">
+                                <strong>Best Auto Corporation</strong>
+                            </h1>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, consectetur!
+                            </p>
+                            <p class="mb-4 d-none d-md-block">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum laborum illum, tempora numquam suscipit voluptas!
+                            </p>
+                            <a href="" class="btn btn-outline-cyan btn-lg">
+                  Lorem, ipsum dolor.
+                  <i class="fa fa-graduation-cap ml-2"></i>
+                </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#carousel-ex" class="carousel-control-prev" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"> </span>
+        </a>
+        <a href="#carousel-ex" class="carousel-control-next" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"> </span>
+        </a>
+    </div>
+    <main>
+        <div class="container">
+            <nav class="navbar navbaer-expand-lg navbar-dark mdb-color lighten-3 nt-3 mb-5 fadeInDownBig">
+                <span class="navbar-brand">Категории</span>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nextNav" aria-controls="nextNav" aria-expanded="false" aria-label="Toggle Navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+                <div class="collapse navbar-collapse" id="nextNav">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Все</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Бюджетные</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Премиум</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Бизнес</a>
+                        </li>
+                    </ul>
+                    <form action="#" class="form__inline">
+                        <div class="md-form my-0">
+                            <input type="text" class="form-control mr-sm-2" placeholder="Поиск" aria-label="Искать" />
+                        </div>
+                    </form>
+                </div>
+            </nav>
+            <section class="text-center mb-4">
+                <div class="row wow slideInLeft">
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card">
+                            <div class="view overlay">
+                                <img class="car-img__top" src="https://360view.hum3d.com/zoom/Kia/Kia_Rio_Mk3_UB_5door_2015_1000_0001.jpg" alt="" />
+                                <a href="">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <div class="card__body text-center">
+                                <a href="" class="gray-text">
+                                    <h5>Бюджетные</h5>
+                                </a>
+                                <h5>
+                                    <strong>
+                      <a href="#" class="dark-gray-text">
+                        Kia Rio
+                        <span class="badge badge-pill danger-color">
+                          Новая
+                        </span>
+                      </a></strong
+                    >
+                  </h5>
+                  <h4 class="font-weight-bold blue-text">500000<i class="fas fa-hryvnia"></i></h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card">
+                <div class="view overlay">
+                  <img
+                    class="car-img__top"
+                    src="data:image/jpeg;base64,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jq8WatRKcSvkyn2Blc3qxAFEKDqzKPJdfqBNSrt1vup6t+gkHj8Y9RgXtpcAAWAv/oIzDdSOyEViVc9nLm+ZVlNvrLpsiqlPC1cSyIWD06dNGHEPnYqPHsXP8IE59gquUg2vbiOoOhEtKL8QIyEGmnaN3RSDwuUJve1/XnKytexa+Ez4ipVooFamcUt9RZUzZAeelrTni7Pesxexs1zblqbyzYqkuJrUsFhXLm1qtW1kVARcJpfKovqeJIAnRtnbt00UALwAA8oHLtn7pO1uzLbszcgaFhOgYfBKvAATcSjKK9gN2qaW7N5N0MGq8ABNxUmQLAxJTmULPtp9gfLT7EQEREBERANMDpM8+WgaD0Jq1MLJkpPBpwK5X2cDxEi8TsNTyl0agJjbCiBznE7u9BIrEbvHpOrtghMbbNB5QOOVdgt0mq+xG6TtLbHU8piOwUPKBxVthN0nz/s85+6Z2wbvp0mVNiIOQgcMfdl+hmnX3WqngpPlP0GuyE/CJnTZ6D7o9IH5wp7oYsnsUnbyk3s37N8fUIzolJebO4JA6hVuT52ne0ogcBPQQQKputujSwdMqnadrZ3PeYjgPBRyEsaUJtZZ8tAxqk9hZ6iB8tPsRAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQP/9k="
+                    alt=""
+                  />
+                  <a href="">
+                    <div class="mask rgba-white-slight"></div>
+                  </a>
+                </div>
+                <div class="card__body text-center">
+                  <a href="" class="gray-text">
+                    <h5>Бюджетные</h5>
+                  </a>
+                  <h5>
+                    <strong>
+                      <a href="#" class="dark-gray-text"> VW Polo </a>
+                    </strong>
+                                </h5>
+                                <h4 class="font-weight-bold blue-text">500000<i class="fas fa-hryvnia"></i></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card">
+                            <div class="view overlay">
+                                <img class="car-img__top" src="https://360view.hum3d.com/zoom/Renault/Renault_Logan_Sedan_2011_1000_0001.jpg" alt="" />
+                                <a href="">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <div class="card__body text-center">
+                                <a href="" class="gray-text">
+                                    <h5>Бюджетные</h5>
+                                </a>
+                                <h5>
+                                    <strong>
+                      <a href="#" class="dark-gray-text"> Renault Logan </a>
+                    </strong>
+                                </h5>
+                                <h4 class="font-weight-bold blue-text">304 800<i class="fas fa-hryvnia"></i> </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card">
+                            <div class="view overlay">
+                                <img class="car-img__top" src="https://360view.hum3d.com/zoom/Ford/Ford_Fiesta_hatchback_5door_US_2012_1000_0001.jpg" alt="" />
+                                <a href="">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <div class="card__body text-center">
+                                <a href="" class="gray-text">
+                                    <h5>Бюджетные</h5>
+                                </a>
+                                <h5>
+                                    <strong><a href="#" class="dark-gray-text">
+                        Ford Fiesta
+                      </a></strong
+                    >
+                  </h5>
+                  <h4 class="font-weight-bold blue-text">578 886<i class="fas fa-hryvnia"></i> </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row wow slideInRight">
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card">
+                <div class="view overlay">
+                  <img
+                    class="car-img__top"
+                    src="https://360view.hum3d.com/zoom/Infiniti/Infiniti_QX60_HQinterior_2016_1000_0001.jpg"
+                    alt=""
+                  />
+                  <a href="">
+                    <div class="mask rgba-white-slight"></div>
+                  </a>
+                </div>
+                <div class="card__body text-center">
+                  <a href="" class="gray-text">
+                    <h5>Премиум</h5>
+                  </a>
+                  <h5>
+                    <strong>
+                      <a href="#" class="dark-gray-text">
+                        Infiniti QX60
+                        <span class="badge badge-pill danger-color">
+                          Новая
+                        </span>
+                      </a></strong
+                    >
+                  </h5>
+                  <h4 class="font-weight-bold blue-text">1 290 250<i class="fas fa-hryvnia"></i></h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card">
+                <div class="view overlay">
+                  <img
+                    class="car-img__top"
+                    src="https://cdn.hum3d.com/wp-content/uploads/Land-Rover/061_Land-Rover_Discovery_Mk5f_P360_R-Dynamic_2021/Land-Rover_Discovery_Mk5f_P360_R-Dynamic_2021_1000_0001.jpg"
+                    alt=""
+                  />
+                  <a href="">
+                    <div class="mask rgba-white-slight"></div>
+                  </a>
+                </div>
+                <div class="card__body text-center">
+                  <a href="" class="gray-text">
+                    <h5>Премиум</h5>
+                  </a>
+                  <h5>
+                    <strong>
+                      <a href="#" class="dark-gray-text">
+                        Land Rover Discovery</a
+                      >
+                    </strong>
+                                </h5>
+                                <h4 class="font-weight-bold blue-text">1 600 000 <i class="fas fa-hryvnia"></i></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card">
+                            <div class="view overlay">
+                                <img class="car-img__top" src="https://cdn.hum3d.com/wp-content/uploads/Audi/283_Audi_S3_Mk4_8Y_sportback_Edition_One_2020/Audi_S3_Mk4_8Y_sportback_Edition_One_2020_1000_0001.jpg" alt="" />
+                                <a href="">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <div class="card__body text-center">
+                                <a href="" class="gray-text">
+                                    <h5>Преимум</h5>
+                                </a>
+                                <h5>
+                                    <strong>
+                      <a href="#" class="dark-gray-text">Audi S3</a>
+                    </strong>
+                                </h5>
+                                <h4 class="font-weight-bold blue-text">2 000 000 <i class="fas fa-hryvnia"></i></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card">
+                            <div class="view overlay">
+                                <img class="car-img__top" src="https://360view.hum3d.com/zoom/Lexus/Lexus_NX_F-sport_2014_1000_0001.jpg" alt="" />
+                                <a href="">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <div class="card__body text-center">
+                                <a href="" class="gray-text">
+                                    <h5>Преимум</h5>
+                                </a>
+                                <h5>
+                                    <strong><a href="#" class="dark-gray-text"> Lexus NX </a></strong
+                    >
+                  </h5>
+                  <h4 class="font-weight-bold blue-text">2 207 313<i class="fas fa-hryvnia"></i> </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row wow slideInRight">
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card">
+                <div class="view overlay">
+                  <img
+                    class="car-img__top"
+                    src="https://360view.hum3d.com/zoom/Toyota/Toyota_Camry_XV60_XLE_hybrid_2017_1000_0001.jpg"
+                    alt=""
+                  />
+                  <a href="">
+                    <div class="mask rgba-white-slight"></div>
+                  </a>
+                </div>
+                <div class="card__body text-center">
+                  <a href="" class="gray-text">
+                    <h5>бизнес</h5>
+                  </a>
+                  <h5>
+                    <strong>
+                      <a href="#" class="dark-gray-text">
+                        Toyta Camry
+                        <span class="badge badge-pill danger-color">
+                          Новая
+                        </span>
+                      </a></strong
+                    >
+                  </h5>
+                  <h4 class="font-weight-bold blue-text">1 173 951 <i class="fas fa-hryvnia"></i></h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card">
+                <div class="view overlay">
+                  <img
+                    class="car-img__top"
+                    src="https://360view.hum3d.com/zoom/Kia/Kia_K5_Mk3_2019_1000_0001.jpg"
+                    alt=""
+                  />
+                  <a href="">
+                    <div class="mask rgba-white-slight"></div>
+                  </a>
+                </div>
+                <div class="card__body text-center">
+                  <a href="" class="gray-text">
+                    <h5>Бизнес</h5>
+                  </a>
+                  <h5>
+                    <strong>
+                      <a href="#" class="dark-gray-text"> Kia K5 </a>
+                    </strong>
+                                </h5>
+                                <h4 class="font-weight-bold blue-text">729 807<i class="fas fa-hryvnia"></i></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card">
+                            <div class="view overlay">
+                                <img class="car-img__top" src="https://360view.hum3d.com/zoom/Volkswagen/Volkswagen_Arteon_R-line_2017_1000_0001.jpg" alt="" />
+                                <a href="">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <div class="card__body text-center">
+                                <a href="" class="gray-text">
+                                    <h5>Бизнес</h5>
+                                </a>
+                                <h5>
+                                    <strong>
+                      <a href="#" class="dark-gray-text"> VW Arteon </a>
+                    </strong>
+                                </h5>
+                                <h4 class="font-weight-bold blue-text">1 331 799<i class="fas fa-hryvnia"></i> </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card">
+                            <div class="view overlay">
+                                <img class="car-img__top" src="https://360view.hum3d.com/zoom/Honda/Honda_Accord_Mk9f_sedan_LX_2016_1000_0001.jpg" alt="" />
+                                <a href="">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <div class="card__body text-center">
+                                <a href="" class="gray-text">
+                                    <h5>Бизнес</h5>
+                                </a>
+                                <h5>
+                                    <strong><a href="#" class="dark-gray-text">
+                        Honda Accord
+                      </a></strong
+                    >
+                  </h5>
+                  <h4 class="font-weight-bold blue-text">900 000<i class="fas fa-hryvnia"></i></h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <nav
+          class="d-flex justify-content-center wow fadeIn"
+          aria-label="Page navigation"
+        >
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="visually-hidden">Назад</span>
+              </a>
+            </li>
+
+            <li class="page-item active">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">1</span>
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">2</span>
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">3</span>
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">4</span>
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">5</span>
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="visually-hidden">Вперёд</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </main>
+    <footer class="page-footer text-center font-small mt-4 wow fadeIn">
+      <div class="pt-4">
+        <a href="#" role="button" class="btn btn-outline">
+          BAO
+          <i class="fa fa-graduation-cap ml-2"> </i
+        ></a>
+        <a href="shop_page.html" role="button" class="btn btn-outline">
+          BAO shop
+          <i class="fa fa-graduation-cap ml-2"> </i
+        ></a>
+      </div>
+      <hr class="my-4" />
+      <div class="pb-4">
+        <a href="#">
+          <i class="fab fa-facebook mr-3"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-twitter mr-3"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-instagram mr-3"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-youtube mr-3"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-spotify mr-3"></i>
+        </a>
+      </div>
+      <div class="footer__copyright py-3">Best Auto Corporation</div>
+    </footer>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript"></script>
+    <script>
+      new WOW().init();
+    </script>
+  </body>
+</html>
